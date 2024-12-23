@@ -1,0 +1,89 @@
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  color: #f39c12;
+}
+
+.schedule-demo {
+  background: #f39c12;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.schedule-demo:hover {
+  background: #d35400;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show menu toggle button */
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links initially */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #333;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links.show {
+    display: flex; /* Show nav links when menu is toggled */
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+}
